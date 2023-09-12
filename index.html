@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pokedex</title>
+    <title>Pokedex da MGL</title>
 
     <link
       rel="stylesheet"
@@ -15,11 +15,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="/assets/css/global.css" />
     <link rel="stylesheet" href="/assets/css/pokedex.css" />
 
+    <script src="./assets/js/pokemon-model.js" defer></script>
     <script src="./assets/js/poke-api.js" defer></script>
     <script src="./assets/js/main.js" defer></script>
   </head>
@@ -28,6 +32,10 @@
       <h1>Pokedex da MGL</h1>
 
       <ol id="pokemon-list" class="pokemons"></ol>
+
+      <div class="pagination">
+        <button id="load-more-button" type="button">Carregar mais</button>
+      </div>
     </section>
   </body>
 </html>
