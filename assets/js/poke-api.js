@@ -9,8 +9,13 @@ function convertPokeApiDetailsPokemon(pokeDetail) {
   const [type] = types;
 
   pokemon.types = types;
+  pokemon.type = type
 
   pokemon.photo = pokeDetail.sprites.other.dream_world.front_default;
+
+  pokemon.weight = pokeDetail.weight;
+
+  pokemon.height = pokeDetail.height;
 
   return pokemon;
 }

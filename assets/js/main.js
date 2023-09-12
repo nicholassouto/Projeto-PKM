@@ -9,7 +9,7 @@ function loadPokemonItens(offset, limit) {
     const newHtml = pokemons
       .map(
         (pokemon) => `
-      <li class="pokemon ${pokemon.types[0]}">
+      <li class="pokemon ${pokemon.type}">
               <span class="number">#${pokemon.id
                 .toString()
                 .padStart(3, "0")}</span>
@@ -22,7 +22,11 @@ function loadPokemonItens(offset, limit) {
                   ${pokemon.types
                     .map((type) => `<li class="type ${type}">${type}</li>`)
                     .join("")}
+                    <span class=weight-height>Peso - ${
+                      pokemon.weight
+                    } / Altura - ${pokemon.height}</span>
                 </ol>
+               
                 <img src="${pokemon.photo}"
                   alt=${pokemon.name}
                 />
